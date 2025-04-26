@@ -11,14 +11,31 @@ void getTwoValues(int begin, int end)
         cin >> begin >> end;
     }
 }
-// // Ask for two integer values to User
-// // cin >> begin >> end ; 
-// // The first input "begin" must be less than the second input "end"
-// // Otherwise, you should retake two inputs repeatedly until begin < end.
-// // Assign two input values to the parameters
-// // No return value
 
-// getNextPrime(begin)
+int getNextPrime(int begin)
+{
+	int prime1, flag=0;
+
+	prime1 = begin;
+
+	while(true)
+	{
+		flag=0;
+		for (int div=2; div<prime1; div++)
+		{
+			if (prime1 % div == 0)
+            {
+                flag = 1;
+                prime1 += 1;
+				break;
+            }
+		}
+			if (!flag)
+            {
+                return prime1;
+            }       
+	}
+}
 // // Find the closest next prime number to the given parameter
 // // In other words, prime number > begin and the closest to the "begin"
 // // Return the prime number
