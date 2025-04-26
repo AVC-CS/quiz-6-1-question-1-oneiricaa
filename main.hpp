@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void getTwoValues(int begin, int end)
+void getTwoValues(int &begin, int &end)
 {
     begin = 1;
     end = 0;
@@ -16,7 +16,7 @@ int getNextPrime(int begin)
 {
 	int prime1, flag=0;
 
-	prime1 = begin;
+	prime1 = begin + 1;
 
 	while(true)
 	{
