@@ -36,11 +36,28 @@ int getNextPrime(int begin)
             }       
 	}
 }
-// // Find the closest next prime number to the given parameter
-// // In other words, prime number > begin and the closest to the "begin"
-// // Return the prime number
 
-// getPrevPrime(end)
-// // Find the prime number which is closest to and less than the given parameter
-// // prime number < end
-// // Return the prime number
+int getPrevPrime(int end)
+{
+    int prime2, flag=0;
+
+	prime2 = end - 1;
+
+	while(true)
+	{
+		flag=0;
+		for (int div=2; div<prime2; div++)
+		{
+			if (prime2 % div == 0)
+            {
+                flag = 1;
+                prime2 -= 1;
+				break;
+            }
+		}
+			if (!flag)
+            {
+                return prime2;
+            }       
+	}  
+}
